@@ -10,7 +10,7 @@
 | 5   | [ How do you manipulate DOM using a service worker ](#how-do-you-manipulate-dom-using-a-service-worker )                                                   |
 | 6   | [ What is IndexedDB ](#what-is-indexeddb )                                                   |
 | 7   | [ What is web storage ](#what-is-web-storage )                                                   |
-| 8   | [ ### What is a post message ](#what-is-a-post-message )                                                   |
+| 8   | [ What is a post message ](#what-is-a-post-message )                                                   |
 | 9   | [  ](# )                                                   |
 | 10  | [  ](# )                                                   |
 |    | [  ](# )                                                   |
