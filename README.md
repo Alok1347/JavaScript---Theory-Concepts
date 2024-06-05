@@ -9,7 +9,7 @@
 | 4   | [ What is IndexedDB ](#what-is-indexeddb )                                                                              |
 | 5   | [ What is web storage ](#what-is-web-storage )                                                                          |
 | 6   | [ What is a post message ](#what-is-a-post-message )                                                                    |
-| 7   | [  ](# )                                                   |
+| 7   | [ What is a browser? ](#what-is-a-browser )                                                   |
 | 8  | [  ](# )                                                   |
 |    | [  ](# )                                                   |
 
@@ -57,6 +57,10 @@ Websockets are supported by most modern web browsers and are commonly used in co
     within it). Generally, scripts on different pages are allowed to access each other if and only if the pages follow same-origin policy(i.e, pages share the same protocol, port 
     number, and host).
    
+**[⬆ Back to Top](#table-of-contents)**
+---
+7. ### <span style="color: blue;">What is a browser?</span>
+
 **[⬆ Back to Top](#table-of-contents)**
 ---
 
