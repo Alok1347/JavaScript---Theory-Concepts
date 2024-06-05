@@ -9,9 +9,9 @@
 | 4   | [ What is IndexedDB ](#what-is-indexeddb )                                                                              |
 | 5   | [ What is web storage ](#what-is-web-storage )                                                                          |
 | 6   | [ What is a post message ](#what-is-a-post-message )                                                                    |
-| 7   | [What are the options in a cookie ?](#what-are-the-options-in-a-cookie)                                                   |
-| 8  | [  ](# )                                                   |
-|    | [  ](# )                                                   |
+| 7   | [What are the options in a cookie ?](#what-are-the-options-in-a-cookie)                                                 |
+| 8   | [ What are the methods available on session storage? ](#what-are-the-methods-available-on-session-storage )             |
+| 9   | [ What are server-sent events ](#what-are-server-sent-events )                                                          |
 
 1. ### What are web sockets?
 Websockets are a communication protocol that enables real-time, bidirectional communication between clients and servers over a single, long-lived connection. Unlike traditional HTTP requests, which follow a request-response pattern and require a new connection for each request, websockets maintain a persistent connection between the client and server, allowing both parties to send messages to each other asynchronously.
@@ -69,4 +69,147 @@ document.cookie = "username=John; path=/services";
 
 **[⬆ Back to Top](#table-of-contents)**
 ---
+8. ### What are the methods available on session storage?
+   The session storage provided methods for reading, writing and clearing the session data
+   
+_Save data to sessionStorage_
+sessionStorage.setItem("key", "value");
+
+_Get saved data from sessionStorage_
+let data = sessionStorage.getItem("key");
+
+_Remove saved data from sessionStorage_
+sessionStorage.removeItem("key");
+
+_Remove all saved data from sessionStorage_
+sessionStorage.clear();
+
+**[⬆ Back to Top](#table-of-contents)**
+---
+9. ### what-are-server-sent-events ?
+    Server-sent events (SSE) is a server push technology enabling a browser to receive automatic updates from a server via HTTP connection without resorting to polling. These are a one way communications channel - events flow from server to client only. This has been used in Facebook/Twitter updates, stock price updates, news feeds etc.
+
+**[⬆ Back to Top](#table-of-contents)**
+---
+10. ### What is the purpose of the delete operator in JavaScript?
+The delete operator is used to delete the property as well as its value.
+var user = { firstName: "John", lastName:"Doe", age: 20 };
+delete user.age;
+
+console.log(user); // _{firstName: "John", lastName:"Doe"}_
+
+**[⬆ Back to Top](#table-of-contents)**
+---
+11. ### How do you access history in javascript?
+The window.history object contains the browser's history. You can load previous and next URLs in the history using back() and next() methods.
+function goBack() {
+  window.history.back();
+}
+function goForward() {
+  window.history.forward();
+}
+
+Note: You can also access history without window prefix.
+
+12. ### What is the difference between native, host and user objects?
+    Native objects are objects that are part of the JavaScript language defined by the ECMAScript specification. For example, String, Math, RegExp, Object, Function etc core objects defined in the ECMAScript spec. 
+
+Host objects are objects provided by the browser or runtime environment (Node). For example, window, XmlHttpRequest, DOM nodes etc are considered as host objects.
+
+ User objects are objects defined in the javascript code. For example, User objects created for profile information.
+
+13. ### What is same-origin policy?
+    The same-origin policy is a policy that prevents JavaScript from making requests across domain boundaries. An origin is defined as a combination of URI scheme, hostname, and port number. If you enable this policy then it prevents a malicious script on one page from obtaining access to sensitive data on another web page using Document Object Model(DOM).
+
+14. What is the purpose JSON stringify?
+    When sending data to a web server, the data has to be in a string format. You can achieve this by converting JSON object into a string using stringify() method.
+var userJSON = { name: "John", age: 31 };
+var userString = JSON.stringify(userJSON);
+console.log(userString); // _"{"name":"John","age":31}"_
+
+15. ### How do you parse JSON string?
+When receiving the data from a web server, the data is always in a string format. But you can convert this string value to a javascript object using parse() method.
+var userString = '{"name":"John","age":31}';
+var userJSON = JSON.parse(userString);
+console.log(userJSON); // {name: "John", age: 31}
+ 
+
+16. ### How do you test for length of object?
+console.log(Object.entries(alok).length)
+
+17. ### How do you check if a string starts with another string?
+    You can use ECMAScript 6's String.prototype.startsWith() method to check if a string starts with another string or not. But it is not yet supported in all browsers. Let's see an example to see this usage,
+"Good morning".startsWith("Good"); // true
+"Good morning".startsWith("morning"); // false
+
+18. ### What is tree shaking?
+Tree shaking is a form of dead code elimination. It means that unused modules will not be included in the bundle during the build process and for that it relies on the static structure of ES2015 module syntax,( i.e. import and export). Initially this has been popularized by the ES2015 module bundler rollup.
+
+19. ### What is the need of tree shaking?
+Tree Shaking can significantly reduce the code size in any application. i.e, The less code we send over the wire the more performant the application will be. For example, if we just want to create a “Hello World” Application using SPA frameworks then it will take around a few MBs, but by tree shaking it can bring down the size to just a few hundred KBs. Tree shaking is implemented in Rollup and Webpack bundlers.
+
+20. ### What is the purpose of double exclamation?
+The double exclamation or negation(!!) ensures the resulting type is a boolean. If it was falsey (e.g. 0, null, undefined, etc.), it will be false, otherwise, it will be true. For example, you can test IE version using this expression as below,
+let isIE8 = false;
+isIE8 = !!navigator.userAgent.match(/MSIE 8.0/);
+console.log(isIE8); // returns true or false
+
+21. ### How do you determine two values same or not using object?
+The Object.is() method determines whether two values are the same value. For example, the usage with different types of values would be,
+Object.is("hello", "hello"); // true
+Object.is(window, window); // true
+Object.is([], []); // false
+
+22. ### How do you copy properties from one object to other?
+You can use the Object.assign() method which is used to copy the values and properties from one or more source objects to a target object. It returns the target object which has properties and values copied from the source objects. The syntax would be as below,
+Object.assign(target, ...sources);
+
+_Let's take example with one source and one target object_ ,
+const target = { a: 1, b: 2 };
+const source = { b: 3, c: 4 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target); // { a: 1, b: 3, c: 4 }
+
+console.log(returnedTarget); // { a: 1, b: 3, c: 4 }
+
+23. ### What is the purpose of seal method?
+The Object.seal() method is used to seal an object, by preventing new properties from being added to it and marking all existing properties as non-configurable. But values of present properties can still be changed as long as they are writable. Let's see the below example to understand more about seal() method
+const object = {
+  property: "Welcome JS world",
+};
+Object.seal(object);
+object.property = "Welcome to object world";
+console.log(Object.isSealed(object)); // true
+delete object.property; // You cannot delete when sealed
+console.log(object.property); //Welcome to object world
+
+24. ### What are the differences between freeze and seal methods?
+If an object is frozen using the Object.freeze() method then its properties become immutable and no changes can be made in them whereas if an object is sealed using the Object.seal() method then the changes can be made in the existing properties of the object.
+
+25. ### What are the differences between WeakSet and Set?
+The main difference is that references to objects in Set are strong while references to objects in WeakSet are weak. i.e, An object in WeakSet can be garbage collected if there is no other reference to it. Other differences are,
+* Sets can store any value Whereas WeakSets can store only collections of objects
+* WeakSet does not have size property unlike Set
+* WeakSet does not have methods such as clear, keys, values, entries, forEach.
+* WeakSet is not iterable.
+
+26. ### What is the output of below spread operator array?
+[..."John Resig"];
+
+The output of the array is ['J', 'o', 'h', 'n', '', 'R', 'e', 's', 'i', 'g'] Explanation: The string is an iterable type and the spread operator within an array maps every character of an iterable to one element. Hence, each character of a string becomes an element within an Array.
+
+27. ### How do you combine two or more arrays?
+The concat() method is used to join two or more arrays by returning a new array containing all the elements. The syntax would be as below,
+array1.concat(array2, array3, ..., arrayX)
+
+Let's take an example of array's concatenation with veggies and fruits arrays,
+var veggies = ["Tomato", "Carrot", "Cabbage"];
+var fruits = ["Apple", "Orange", "Pears"];
+var veggiesAndFruits = veggies.concat(fruits);
+console.log(veggiesAndFruits); // Tomato, Carrot, Cabbage, Apple, Orange, Pears
+
+
+
 
