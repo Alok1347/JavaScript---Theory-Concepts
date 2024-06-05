@@ -9,7 +9,7 @@
 | 4   | [ What is IndexedDB ](#what-is-indexeddb )                                                                              |
 | 5   | [ What is web storage ](#what-is-web-storage )                                                                          |
 | 6   | [ What is a post message ](#what-is-a-post-message )                                                                    |
-| 7   | [What is a service worker](#what-is-a-service-worker )                                                   |
+| 7   | [What are the options in a cookie ?](#what-are-the-options-in-a-cookie)                                                   |
 | 8  | [  ](# )                                                   |
 |    | [  ](# )                                                   |
 
@@ -59,10 +59,13 @@ Websockets are supported by most modern web browsers and are commonly used in co
    
 **[⬆ Back to Top](#table-of-contents)**
 ---
-7. ### What is a service worker
->
-A Service worker is basically a script (JavaScript file) that runs in the background, separate from a web page and provides features that don't need a web page or user interaction. Some of the major features of service workers are Rich offline experiences(offline first web application development), periodic background syncs, push notifications, intercept and handle network requests and programmatically managing a cache of responses.
->
+7. ### What are the options in a cookie?
+There are few below options available for a cookie,
+By default, the cookie is deleted when the browser is closed but you can change this behavior by setting expiry date (in UTC time).
+document.cookie = "username=John; expires=Sat, 8 Jun 2019 12:00:00 UTC";
+
+By default, the cookie belongs to a current page. But you can tell the browser what path the cookie belongs to using a path parameter.
+document.cookie = "username=John; path=/services";
 **[⬆ Back to Top](#table-of-contents)**
 ---
 
