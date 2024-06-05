@@ -3,16 +3,14 @@
 
 | No. | Questions                                                                                                                                                     |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | [What are web sockets](#what-are-web-sockets)                                                                                           |
-| 2   | [Output 1](#output-1)                                                   |
-| 3   | [Output 2](#output-2 )                                                   |
-| 4   | [What is a service worker](#what-is-a-service-worker )                                                   |
-| 5   | [ How do you manipulate DOM using a service worker ](#how-do-you-manipulate-dom-using-a-service-worker )                                                   |
-| 6   | [ What is IndexedDB ](#what-is-indexeddb )                                                   |
-| 7   | [ What is web storage ](#what-is-web-storage )                                                   |
-| 8   | [ What is a post message ](#what-is-a-post-message )                                                   |
-| 9   | [  ](# )                                                   |
-| 10  | [  ](# )                                                   |
+| 1   | [What are web sockets](#what-are-web-sockets)                                                                           |
+| 2   | [What is a service worker](#what-is-a-service-worker )                                                                  |
+| 3   | [ How do you manipulate DOM using a service worker ](#how-do-you-manipulate-dom-using-a-service-worker )                |
+| 4   | [ What is IndexedDB ](#what-is-indexeddb )                                                                              |
+| 5   | [ What is web storage ](#what-is-web-storage )                                                                          |
+| 6   | [ What is a post message ](#what-is-a-post-message )                                                                    |
+| 7   | [  ](# )                                                   |
+| 8  | [  ](# )                                                   |
 |    | [  ](# )                                                   |
 
 1. ### What are web sockets?
@@ -23,46 +21,29 @@ Websockets are supported by most modern web browsers and are commonly used in co
 
 **[⬆ Back to Top](#table-of-contents)**
 ---
-2. ### Output 1
- ```js
-   getProjects().then(() => console.log('hi'));
-      console.log('hello');
-   ```
-   The console.log('hello') statement will be executed first, followed by the .then() callback function (console.log('hi')).
-This is because getProjects() is an asynchronous function that returns a Promise. When you call getProjects().then(), it schedules the execution of the callback function to be executed asynchronously after the promise returned by getProjects() resolves. Meanwhile, the console.log('hello') statement is synchronous and will be executed immediately.
 
-**[⬆ Back to Top](#table-of-contents)**
----
-3. ### Output 2
-```js
-await getProjects();
-console.log('hello');
-```
-In JavaScript, when you use the await keyword, it pauses the execution of the code until the promise returned by the asynchronous function getProjects() resolves. This means that the code inside getProjects() will be executed first, and only after it completes will the console.log('hello') statement be executed. The output will be the result of getProjects() (assuming it returns something), followed by 'hello'
 
-**[⬆ Back to Top](#table-of-contents)**
----
-4. ### What is a service worker
+2. ### What is a service worker
    A Service worker is basically a script (JavaScript file) that runs in the background, separate from a web page and provides features that don't need a web page or user interaction. 
    Some of the major features of service workers are Rich offline experiences(offline first web application development), periodic background syncs, push notifications, intercept and 
    handle network requests and programmatically managing a cache of responses.
    
 **[⬆ Back to Top](#table-of-contents)**
 ---
-5. ### How do you manipulate DOM using a service worker
+3. ### How do you manipulate DOM using a service worker
    Service worker can't access the DOM directly. But it can communicate with the pages it controls by responding to messages sent via the postMessage interface, and those pages can 
    manipulate the DOM.
    
 **[⬆ Back to Top](#table-of-contents)**
 ---
 
-6. ### What is IndexedDB
+4. ### What is IndexedDB
    IndexedDB is a low-level API for client-side storage of larger amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this 
    data.
    
 **[⬆ Back to Top](#table-of-contents)**
 ---
-7. ### What is web storage
+5. ### What is web storage
    Web storage is an API that provides a mechanism by which browsers can store key/value pairs locally within the user's browser, in a much more intuitive fashion than using cookies. 
    The web storage provides two mechanisms for storing data on the client.
    Local storage: It stores data for current origin with no expiration date.
@@ -71,7 +52,7 @@ In JavaScript, when you use the await keyword, it pauses the execution of the co
 **[⬆ Back to Top](#table-of-contents)**
 ---
 
-8. ### What is a post message
+6. ### What is a post message
     Post message is a method that enables cross-origin communication between Window objects.(i.e, between a page and a pop-up that it spawned, or between a page and an iframe embedded 
     within it). Generally, scripts on different pages are allowed to access each other if and only if the pages follow same-origin policy(i.e, pages share the same protocol, port 
     number, and host).
