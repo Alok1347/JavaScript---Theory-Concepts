@@ -121,7 +121,7 @@ Host objects are objects provided by the browser or runtime environment (Node).
 13. ### What is same-origin policy?
     The same-origin policy is a policy that prevents JavaScript from making requests across domain boundaries. An origin is defined as a combination of URI scheme, hostname, and port number. If you enable this policy then it prevents a malicious script on one page from obtaining access to sensitive data on another web page using Document Object Model(DOM).
 
-14. What is the purpose JSON stringify?
+14. ### What is the purpose JSON stringify?
     When sending data to a web server, the data has to be in a string format. You can achieve this by converting JSON object into a string using stringify() method.
 var userJSON = { name: "John", age: 31 };
 var userString = JSON.stringify(userJSON);
@@ -209,6 +209,24 @@ var veggies = ["Tomato", "Carrot", "Cabbage"];
 var fruits = ["Apple", "Orange", "Pears"];
 var veggiesAndFruits = veggies.concat(fruits);
 console.log(veggiesAndFruits); // Tomato, Carrot, Cabbage, Apple, Orange, Pears
+
+28. ### What is the output of below console statement with unary operator?
+Let's take console statement with unary operator as given below,
+console.log(+"Hello");
+
+The output of the above console log statement returns NaN. Because the element is prefixed by the unary operator and the JavaScript interpreter will try to convert that element into a number type. Since the conversion fails, the value of the statement results in NaN value.
+
+29. ### What happens if we add two arrays?
+If you add two arrays together, it will convert them both to strings and concatenate them. For example, the result of adding arrays would be as below,
+console.log(["a"] + ["b"]); // "ab"
+console.log([] + []); // ""
+console.log(![] + []); // "false", because ![] returns false.
+
+30. ### How do you empty an array?
+You can empty an array quickly by setting the array length to zero.
+let cities = ["Singapore", "Delhi", "London"];
+cities.length = 0; // cities becomes []
+
 
 
 
