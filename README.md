@@ -12,6 +12,23 @@
 | 7   | [What are the options in a cookie ?](#what-are-the-options-in-a-cookie)                                                 |
 | 8   | [ What are the methods available on session storage? ](#what-are-the-methods-available-on-session-storage )             |
 | 9   | [ What are server-sent events ](#what-are-server-sent-events )                                                          |
+| 10   | [  ](# )                                                          |
+| 11   | [  ](# )                                                          |
+| 12   | [  ](# )                                                          |
+| 13   | [  ](# )                                                          |
+| 14   | [  ](# )                                                          |
+| 15   | [  ](# )                                                          |
+| 16   | [  ](# )                                                          |
+| 17   | [  ](# )                                                          |
+| 18   | [  ](# )                                                          |
+| 19   | [  ](# )                                                          |
+| 20   | [  ](# )                                                          |
+| 21   | [  ](# )                                                          |
+| 22   | [  ](# )                                                          |
+| 23   | [  ](# )                                                          |
+| 24   | [  ](# )                                                          |
+| 25   | [  ](# )                                                          |
+| 26   | [  ](# )                                                          |
 
 1. ### What are web sockets?
 Websockets are a communication protocol that enables real-time, bidirectional communication between clients and servers over a single, long-lived connection. Unlike traditional HTTP requests, which follow a request-response pattern and require a new connection for each request, websockets maintain a persistent connection between the client and server, allowing both parties to send messages to each other asynchronously.
