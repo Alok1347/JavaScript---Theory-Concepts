@@ -111,6 +111,8 @@ function goForward() {
 
 Note: You can also access history without window prefix.
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 12. ### What is the difference between native, host and user objects?
     Native objects are objects that are part of the JavaScript language defined by the ECMAScript specification. For example, String, Math, RegExp, Object, Function etc core objects defined in the ECMAScript spec. 
 
@@ -118,22 +120,29 @@ Host objects are objects provided by the browser or runtime environment (Node).
 
  User objects are objects defined in the javascript code. For example, User objects created for profile information.
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 13. ### What is same-origin policy?
     The same-origin policy is a policy that prevents JavaScript from making requests across domain boundaries. An origin is defined as a combination of URI scheme, hostname, and port number. If you enable this policy then it prevents a malicious script on one page from obtaining access to sensitive data on another web page using Document Object Model(DOM).
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 14. ### What is the purpose JSON stringify?
     When sending data to a web server, the data has to be in a string format. You can achieve this by converting JSON object into a string using stringify() method.
 var userJSON = { name: "John", age: 31 };
 var userString = JSON.stringify(userJSON);
 console.log(userString); // _"{"name":"John","age":31}"_
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 15. ### How do you parse JSON string?
 When receiving the data from a web server, the data is always in a string format. But you can convert this string value to a javascript object using parse() method.
 var userString = '{"name":"John","age":31}';
 var userJSON = JSON.parse(userString);
 console.log(userJSON); // {name: "John", age: 31}
- 
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 16. ### How do you test for length of object?
 console.log(Object.entries(alok).length)
 
@@ -142,9 +151,13 @@ console.log(Object.entries(alok).length)
 "Good morning".startsWith("Good"); // true
 "Good morning".startsWith("morning"); // false
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 18. ### What is tree shaking?
 Tree shaking is a form of dead code elimination. It means that unused modules will not be included in the bundle during the build process and for that it relies on the static structure of ES2015 module syntax,( i.e. import and export). Initially this has been popularized by the ES2015 module bundler rollup.
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 19. ### What is the need of tree shaking?
 Tree Shaking can significantly reduce the code size in any application. i.e, The less code we send over the wire the more performant the application will be. For example, if we just want to create a “Hello World” Application using SPA frameworks then it will take around a few MBs, but by tree shaking it can bring down the size to just a few hundred KBs. Tree shaking is implemented in Rollup and Webpack bundlers.
 
@@ -154,12 +167,16 @@ let isIE8 = false;
 isIE8 = !!navigator.userAgent.match(/MSIE 8.0/);
 console.log(isIE8); // returns true or false
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 21. ### How do you determine two values same or not using object?
 The Object.is() method determines whether two values are the same value. For example, the usage with different types of values would be,
 Object.is("hello", "hello"); // true
 Object.is(window, window); // true
 Object.is([], []); // false
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 22. ### How do you copy properties from one object to other?
 You can use the Object.assign() method which is used to copy the values and properties from one or more source objects to a target object. It returns the target object which has properties and values copied from the source objects. The syntax would be as below,
 Object.assign(target, ...sources);
@@ -185,9 +202,13 @@ console.log(Object.isSealed(object)); // true
 delete object.property; // You cannot delete when sealed
 console.log(object.property); //Welcome to object world
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 24. ### What are the differences between freeze and seal methods?
 If an object is frozen using the Object.freeze() method then its properties become immutable and no changes can be made in them whereas if an object is sealed using the Object.seal() method then the changes can be made in the existing properties of the object.
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 25. ### What are the differences between WeakSet and Set?
 The main difference is that references to objects in Set are strong while references to objects in WeakSet are weak. i.e, An object in WeakSet can be garbage collected if there is no other reference to it. Other differences are,
 * Sets can store any value Whereas WeakSets can store only collections of objects
@@ -195,11 +216,15 @@ The main difference is that references to objects in Set are strong while refere
 * WeakSet does not have methods such as clear, keys, values, entries, forEach.
 * WeakSet is not iterable.
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 26. ### What is the output of below spread operator array?
 [..."John Resig"];
 
 The output of the array is ['J', 'o', 'h', 'n', '', 'R', 'e', 's', 'i', 'g'] Explanation: The string is an iterable type and the spread operator within an array maps every character of an iterable to one element. Hence, each character of a string becomes an element within an Array.
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 27. ### How do you combine two or more arrays?
 The concat() method is used to join two or more arrays by returning a new array containing all the elements. The syntax would be as below,
 array1.concat(array2, array3, ..., arrayX)
@@ -210,18 +235,24 @@ var fruits = ["Apple", "Orange", "Pears"];
 var veggiesAndFruits = veggies.concat(fruits);
 console.log(veggiesAndFruits); // Tomato, Carrot, Cabbage, Apple, Orange, Pears
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 28. ### What is the output of below console statement with unary operator?
 Let's take console statement with unary operator as given below,
 console.log(+"Hello");
 
 The output of the above console log statement returns NaN. Because the element is prefixed by the unary operator and the JavaScript interpreter will try to convert that element into a number type. Since the conversion fails, the value of the statement results in NaN value.
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 29. ### What happens if we add two arrays?
 If you add two arrays together, it will convert them both to strings and concatenate them. For example, the result of adding arrays would be as below,
 console.log(["a"] + ["b"]); // "ab"
 console.log([] + []); // ""
 console.log(![] + []); // "false", because ![] returns false.
 
+**[⬆ Back to Top](#table-of-contents)**
+---
 30. ### How do you empty an array?
 You can empty an array quickly by setting the array length to zero.
 let cities = ["Singapore", "Delhi", "London"];
