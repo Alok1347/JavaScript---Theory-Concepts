@@ -12,23 +12,29 @@
 | 7   | [What are the options in a cookie ?](#what-are-the-options-in-a-cookie)                                                 |
 | 8   | [ What are the methods available on session storage? ](#what-are-the-methods-available-on-session-storage )             |
 | 9   | [ What are server-sent events ](#what-are-server-sent-events )                                                          |
-| 10   | [  ](# )                                                          |
-| 11   | [  ](# )                                                          |
-| 12   | [  ](# )                                                          |
-| 13   | [  ](# )                                                          |
-| 14   | [  ](# )                                                          |
-| 15   | [  ](# )                                                          |
-| 16   | [  ](# )                                                          |
-| 17   | [  ](# )                                                          |
-| 18   | [  ](# )                                                          |
-| 19   | [  ](# )                                                          |
-| 20   | [  ](# )                                                          |
-| 21   | [  ](# )                                                          |
-| 22   | [  ](# )                                                          |
-| 23   | [  ](# )                                                          |
-| 24   | [  ](# )                                                          |
-| 25   | [  ](# )                                                          |
-| 26   | [  ](# )                                                          |
+| 10   | [ What is the purpose of the delete operator in JavaScript? ](#what-is-the-purpose-of-the-delete-operator-in-javascript )                                        |
+| 11   | [ How do you access history in javascript? ](#how-do-you-access-history-in-javascript )                                                          |
+| 12   | [ What is the difference between native, host and user objects? ](#what-is-the-difference-between-native-host-and-user-objects )                                             |
+| 13   | [ What is same-origin policy? ](#what-is-same-origin-policy )                                                          |
+| 14   | [ What is the purpose JSON stringify? ](#what-is-the-purpose-json-stringify )                                                          |
+| 15   | [ How do you parse JSON string? ](#how-do-you-parse-json-string )                                                          |
+| 16   | [ How do you test for length of object? ](#how-do-you-test-for-length-of-object )                                                          |
+| 17   | [ How do you check if a string starts with another string? ](#how-do-you-check-if-a-string-starts-with-another-string )                                                      |
+| 18   | [ What is tree shaking? ](#what-is-tree-shaking )                                                          |
+| 19   | [ What is the need of tree shaking? ](#what-is-the-need-of-tree-shaking )                                                          |
+| 20   | [ What is the purpose of double exclamation? ](#what-is-the-purpose-of-double-exclamation )                                                          |
+| 21   | [ How do you determine two values same or not using object? ](#how-do-you-determine-two-values-same-or-not-using-object )                                                    |
+| 22   | [ How do you copy properties from one object to other? ](#how-do-you-copy-properties-from-one-object-to-other )                                                          |
+| 23   | [ What is the purpose of seal method? ](#what-is-the-purpose-of-seal-method )                                                          |
+| 24   | [ What are the differences between freeze and seal methods? ](#what-are-the-differences-between-freeze-and-seal-methods )                                                     |
+| 25   | [ What are the differences between WeakSet and Set? ](#what-are-the-differences-between-weakset-and-set )                                                          |
+| 26   | [ What is the output of below spread operator array? ](#what-is-the-output-of-below-spread-operator-array )                                                          |
+| 27   | [ How do you combine two or more arrays? ](#how-do-you-combine-two-or-more-arrays )                                                          |
+| 28   | [ What is the output of below console statement with unary operator? ](#what-is-the-output-of-below-console-statement-with-unary-operator ) |
+| 29   | [ What happens if we add two arrays? ](#what-happens-if-we-add-two-arrays )                                                          |
+| 30   | [ How do you empty an array? ](#how-do-you-empty-an-array )                                                          |
+| 31   | [  ](# )                                                          |
+| 32   | [  ](# )                                                          |
 
 1. ### What are web sockets?
 Websockets are a communication protocol that enables real-time, bidirectional communication between clients and servers over a single, long-lived connection. Unlike traditional HTTP requests, which follow a request-response pattern and require a new connection for each request, websockets maintain a persistent connection between the client and server, allowing both parties to send messages to each other asynchronously.
